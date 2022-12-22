@@ -3,8 +3,13 @@ import logo from "./logo.svg";
 function App() {
   return (
     <>
-      <img src="/logo192.png" alt="" />
-      <img src={logo} alt="" />
+      {process.env.NODE_ENV === "production" && (
+        <>
+          <img src="/logo192.png" alt="" />
+          <img src={logo} alt="" />
+        </>
+      )}
+      <p>{process.env.REACT_APP_API_URL}</p>
     </>
   );
 }
