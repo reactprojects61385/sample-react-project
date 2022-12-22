@@ -27,7 +27,7 @@ export default function Test() {
       .then((res) => res.json())
       .then((data) => setPost(data));
 
-    document.onkeydown = (e) => {
+    window.onkeydown = (e) => {
       const { key } = e;
 
       const left = key === "ArrowLeft";
