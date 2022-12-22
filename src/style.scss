@@ -1,0 +1,16 @@
+$gray: #ddd;
+
+.input {
+  margin-left: 12px;
+  border: 1px solid $gray;
+  padding: 4px;
+
+  &:hover {
+    border-color: rgba(#000, .3);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgba(#000, .5);
+  }
+}

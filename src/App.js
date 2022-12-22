@@ -7,6 +7,7 @@ import Bootsrap from "./Bootsrap";
 
 import "./tailwind.css";
 import MaterialUI from "./MaterialUi";
+import Input from "./Input";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Bootsrap />
       <Tailwind />
       <MaterialUI />
+      <Input />
     </main>
   );
 }
