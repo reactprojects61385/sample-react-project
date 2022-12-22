@@ -9,14 +9,14 @@ export default function Test() {
   useEffect(() => {
     console.log("component ilk defa render oldu!");
 
-    let interval = setInterval(() => {
+    /*let interval = setInterval(() => {
       console.log("interval çalıştı!");
-    }, 2000);
+    }, 2000);*/
 
     // When component destroy
     return () => {
       console.warn("component destroyed");
-      clearInterval(interval);
+      // clearInterval(interval);
     };
   }, []);
 
@@ -26,6 +26,23 @@ export default function Test() {
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
       .then((res) => res.json())
       .then((data) => setPost(data));
+
+    document.onkeydown = (e) => {
+      const { key } = e;
+
+      const left = key === "ArrowLeft";
+      const right = key === "ArrowRight";
+
+      if (right && postId < 100) {
+        console.log("right!");
+        setPostId((count) => count + 1);
+      }
+
+      if (left && postId > 1) {
+        console.log("left");
+        setPostId((count) => count - 1);
+      }
+    };
   }, [postId]);
 
   /*useEffect(() => {
