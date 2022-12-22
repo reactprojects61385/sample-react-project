@@ -1,31 +1,45 @@
-import logo from "./logo.svg";
-
+// import { createElement } from "react";
 import "./global.css";
-import Test from "./Test";
-import { Title, Tailwind } from "./Components";
-import Bootsrap from "./Bootsrap";
-
-import "./tailwind.css";
-import MaterialUI from "./MaterialUi";
-import Input from "./Input";
 
 function App() {
+  const todos = ["todo 1", "todo 2", "todo 3"];
+
+  /*const h1 = createElement("h1", null, "Todo App");
+  const ul = createElement(
+    "ul",
+    null,
+    todos.map((todo) => createElement("li", null, todo))
+  );
+
+  const main = createElement(
+    "main",
+    {
+      id: "main",
+      className: "container",
+    },
+    h1,
+    ul
+  );
+
+  return main;*/
+
   return (
-    <main>
-      {process.env.NODE_ENV === "production" && (
-        <>
-          <img src="/logo192.png" alt="" />
-          <img src={logo} alt="" />
-        </>
-      )}
-      <p className="black">{process.env.REACT_APP_API_URL}</p>
-      <Test />
-      <Title>Hello World!</Title>
-      <Title size="small">This is a small title..</Title>
-      <Bootsrap />
-      <Tailwind />
-      <MaterialUI />
-      <Input />
+    <main id="main" className="content">
+      <h1
+        style={{
+          color: "#fcfcfc",
+        }}
+        tabIndex={1}
+      >
+        Todo App
+      </h1>
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index} tabIndex={index + 1}>
+            {todo}
+          </li>
+        ))}
+      </ul>
     </main>
   );
 }
