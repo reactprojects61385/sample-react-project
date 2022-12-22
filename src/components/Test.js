@@ -41,7 +41,7 @@ export default function Test() {
       {!post && <>(Component Lifecycle)</>}
       {post && (
         <>
-          {post.title && <h1>{post.title}</h1>}
+          {post.title && <h1 className="post-title">{post.title}</h1>}
           {post.body && <p className="post-body">{post.body}</p>}
         </>
       )}
@@ -50,7 +50,7 @@ export default function Test() {
       <div>
         <Button
           size="small"
-          variant="outlined"
+          variant="contained"
           color="secondary"
           onClick={() => setPostId((count) => count - 1)}
           disabled={postId === 1}
@@ -59,21 +59,13 @@ export default function Test() {
             {<MdKeyboardArrowLeft size={20} />}
           </span>
         </Button>
-        <span
-          style={{
-            padding: "0 12px",
-            minWidth: "65px",
-            display: "inline-block",
-            textAlign: "center",
-          }}
-        >
-          {postId}
-        </span>
+        <span id="counter-span">{postId}</span>
         <Button
           size="small"
-          variant="outlined"
+          variant="contained"
           color="secondary"
           onClick={() => setPostId((count) => count + 1)}
+          disabled={postId === 100}
         >
           <span className="span-counter">
             {<MdKeyboardArrowRight size={20} />}

@@ -12,7 +12,7 @@ export default function App() {
       <Button
         onClick={() => setShow((show) => !show)}
         text={text}
-        variant="dark"
+        variant="primary"
       />
       {show && <Test />}
     </main>
