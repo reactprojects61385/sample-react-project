@@ -6,6 +6,7 @@ import { Title, Tailwind } from "./Components";
 import Bootsrap from "./Bootsrap";
 
 import "./tailwind.css";
+import MaterialUI from "./MaterialUi";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Title size="small">This is a small title..</Title>
       <Bootsrap />
       <Tailwind />
+      <MaterialUI />
     </main>
   );
 }

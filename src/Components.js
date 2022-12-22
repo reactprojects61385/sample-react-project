@@ -20,5 +20,5 @@ export const Title = styled.h1`
 `;
 
 export const Tailwind = () => {
-  return <p className="bg-slate-900 text-pink-300">Tailwind Component</p>;
+  return <p className="bg-slate-900 text-pink-300 mb-6">Tailwind Component</p>;
 };
