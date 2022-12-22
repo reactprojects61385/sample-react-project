@@ -1,32 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Unbounded', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Unbounded", cursive;
 }
 
 html,
 body,
 #root {
-    height: 100%;
+  height: 100%;
 }
 
 main {
-    padding: 2em;
+  padding: 2em;
 }
 
 #main {
-    background: #1d1d1f;
-    height: 100%;
+  background: #1d1d1f;
+  height: 100%;
 }
 
 #main * {
-    color: #7d7d7d;
+  color: #7d7d7d;
+}
+
+button {
+  outline: 0;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.15s ease;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: scale(1.055);
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+button.primary {
+  background: #06f;
+  color: #fff;
+}
+
+button.primary:hover {
+  background: #0258db !important;
+}
+
+button.danger {
+  background: #790606;
+  color: #f1f1f1;
+}
+
+button.danger:hover {
+  background: #4f0101;
+}
+
+button.warning {
+  background: #ffc600;
+  color: #fff;
+}
+
+button.warning:hover {
+  background: #c36f09 !important;
 }
 
 .black {
-    background: #000;
-    color: #fff;
+  background: #000;
+  color: #fff;
 }

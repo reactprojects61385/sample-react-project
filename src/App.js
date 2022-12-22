@@ -1,5 +1,6 @@
 // import { createElement } from "react";
 import "./global.css";
+import Button from "./components/Button";
 
 function App() {
   const todos = ["todo 1", "todo 2", "todo 3"];
@@ -23,7 +24,7 @@ function App() {
 
   return main;*/
 
-  return (
+  /*return (
     <main id="main" className="content">
       <h1
         style={{
@@ -41,6 +42,16 @@ function App() {
         ))}
       </ul>
     </main>
+  );*/
+
+  return (
+    <>
+      <main>
+        <Button text="primary" />
+        <Button text="danger" variant="danger" />
+        <Button text="warning" variant="warning" />
+      </main>
+    </>
   );
 }
 
